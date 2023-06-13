@@ -1,0 +1,16 @@
+extends layout
+
+block main-content
+
+
+  h1.page-title Hello! Here's a list of 15 Top Shows
+  table 
+    tr 
+        th Show title 
+        th Year
+    each shows in topShows
+        tr
+            td
+                a(href=`https://www.imdb.com/title/${shows.ids.imdb}`)= shows.title
+            td= shows.year
+    //-   li #{shows.title} (#{shows.year})
